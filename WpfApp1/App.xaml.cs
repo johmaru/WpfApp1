@@ -51,8 +51,8 @@ public partial class App : Application
 
     private async void App_OnStartup(object sender, StartupEventArgs e)
     {
-        await UpdateCheck();
         MainWindow = new MainWindow();
         MainWindow.Show();
+        await UpdateCheck();
     }
 }
