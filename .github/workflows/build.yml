@@ -15,7 +15,7 @@ jobs:
             - name: Get Version from Project File
               id: get-version
               shell: bash
-              run: echo "version=$(grep -oE '<Version>[^<]+' johmaru/WpfApp1.csproj | sed 's/<Version>//')" >> $GITHUB_OUTPUT
+              run: echo "version=$(grep -oE '<Version>[^<]+' WpfApp1/WpfApp1.csproj | sed 's/<Version>//')" >> $GITHUB_OUTPUT
 
             - name: Get Now Time
               id: get-time
