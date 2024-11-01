@@ -24,7 +24,6 @@ public class Program
             });
             thread.SetApartmentState(ApartmentState.STA);
             thread.Start();
-            thread.Join();
         }
         catch (Exception e)
         {
