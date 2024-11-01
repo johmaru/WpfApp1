@@ -34,6 +34,6 @@ jobs:
             - name: Create Velopack Release
               run: |
                     dotnet tool install -g vpk
-                    vpk download github --repoUrl <自分のアプリケーションのリポジトリURL>
+                    vpk download github --repoUrl https://github.com/johmaru/WpfApp1
                     vpk pack --mainExe WpfApp1.exe -v ${{ steps.get-version.outputs.version }} -p publish --packId WpfApp1-${{ steps.get-version.outputs.version }}-${{ steps.get-time.outputs.time }}
                     vpk upload github --token ${{ secrets.TOKEN }}  --repoUrl https://github.com/johmaru/WpfApp1 --publish --releaseName "WpfApp1 ${{ steps.get-version.outputs.version }}" --tag v${{ steps.get-version.outputs.version }}
