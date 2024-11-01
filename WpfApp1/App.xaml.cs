@@ -20,7 +20,7 @@ public partial class App : Application
             /*httpsやgitlabなども設定できます。
 今回は、githubで設定しました。ダウングレードやStable、Betaのチャンネル切り替えも出来ますが、今回はシンプルな構造にしました。
                                         */
-            var mgr = new UpdateManager(new GithubSource(@"https://github.com/<Your Name>/<Your Proj>", null, false),
+            var mgr = new UpdateManager(new GithubSource(@"https://github.com/johmaru/WpfApp1", null, false),
                 new UpdateOptions
                 {
                     AllowVersionDowngrade = true
